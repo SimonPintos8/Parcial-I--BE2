@@ -25,7 +25,13 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
                 .requestMatchers(HttpMethod.GET, "/productos/getall", "/productos/**").hasAnyRole(REPOSITOR, ADMIN)
+                .requestMatchers(HttpMethod.POST, "/productos/create", "/productos/**").hasAnyRole(REPOSITOR, ADMIN)
+                .requestMatchers(HttpMethod.PUT, "/productos/edit", "/productos/**").hasAnyRole(REPOSITOR, ADMIN)
+                .requestMatchers(HttpMethod.DELETE, "/productos/**").hasAnyRole(REPOSITOR, ADMIN)
                 .requestMatchers(HttpMethod.GET, "/ventas/getall", "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
+                .requestMatchers(HttpMethod.POST, "/ventas/create", "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
+                .requestMatchers(HttpMethod.PUT, "/ventas/edit", "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
+                .requestMatchers(HttpMethod.DELETE, "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
                 .anyRequest().authenticated();
         http.oauth2ResourceServer()
                 .jwt()

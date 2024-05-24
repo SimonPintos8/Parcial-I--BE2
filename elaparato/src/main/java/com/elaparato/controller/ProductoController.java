@@ -2,6 +2,7 @@ package com.elaparato.controller;
 import com.elaparato.model.Producto;
 import com.elaparato.service.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +31,12 @@ public class ProductoController {
     public String editProducto(@RequestBody Producto prod) {
         prodServ.editProducto(prod);
         return "Producto editado correctamente";
+    }
+
+    @DeleteMapping("/productos/{id}")
+    public ResponseEntity<?> deleteProducto(@PathVariable int id){
+        prodServ.deleteProducto(id);
+        return ResponseEntity.noContent().build();
     }
 
 }

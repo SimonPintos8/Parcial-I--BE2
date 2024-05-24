@@ -5,6 +5,7 @@ import com.elaparato.model.Venta;
 import com.elaparato.service.IProductoService;
 import com.elaparato.service.IVentaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,5 +37,10 @@ public class VentaController {
         return "Venta editada correctamente";
     }
 
+    @DeleteMapping("/ventas/{id}")
+    public ResponseEntity<?> deleteProducto(@PathVariable int id){
+        ventServ.deleteVenta(id);
+        return ResponseEntity.noContent().build();
+    }
 
 }
