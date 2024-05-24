@@ -31,4 +31,5 @@ public class ProductoController {
         prodServ.editProducto(prod);
         return "Producto editado correctamente";
     }
+
 }
