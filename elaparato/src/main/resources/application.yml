@@ -4,7 +4,7 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
-          issuer-uri: http://localhost:9090/realms/el-aparato
+          issuer-uri: http://localhost:9090/realms/el-aparato-simon-pintos
   application:
     name: springboot-keycloak
   jpa:
@@ -33,6 +33,7 @@ server:
 dh:
   keycloak:
     serverUrl: http://localhost:9090
-    realm: el-aparato
+    realm: el-aparato-simon-pintos
     clientId: api-internal-users-client
     clientSecret: 55hsPGIklyPmqv5olyraSsxCGA1aKwA8
+    # El client secret no se expone, pero como no es un proyecto importante/público, así lo dejé

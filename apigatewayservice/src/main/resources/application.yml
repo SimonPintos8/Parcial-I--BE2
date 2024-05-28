@@ -15,13 +15,13 @@ spring:
             client:
                 provider:
                     keycloak-test:
-                        issuer-uri: http://localhost:9090/realms/el-aparato
+                        issuer-uri: http://localhost:9090/realms/el-aparato-simon-pintos
                 registration:
                     keycloak-test:
                         authorization-grant-type: authorization_code
                         client-id: api-aparato-client
                         client-secret: TJK6LRMNKvVd9dhAZety7ThhW7zARm20
-#                        provider: api-gateway-service
+#                        El client secret no se expone, pero como no es un proyecto importante/público, así lo dejé
                         redirect-uri: http://localhost:9091/login/oauth2/code/keycloak
                         scope:
                             - openid
