@@ -10,7 +10,7 @@ public interface IVentaService {
     public List<Venta> getVentas();
 
 
-    public void saveVenta(Venta vent);
+    public Venta saveVenta(Venta vent);
 
 
     //acá en la implementación se puede hacer por ejemplo borrado lógico
@@ -18,7 +18,5 @@ public interface IVentaService {
 
 
     public Venta findVenta(int id);
-
-    public void editVenta(Venta vent);
 
 }

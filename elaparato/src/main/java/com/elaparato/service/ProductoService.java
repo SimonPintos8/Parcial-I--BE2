@@ -17,9 +17,9 @@ public class ProductoService implements IProductoService{
     }
 
     @Override
-    public void saveProducto(Producto prod) {
-
+    public Producto saveProducto(Producto prod) {
         prodRepo.save(prod);
+        return prod;
     }
 
     @Override
@@ -33,9 +33,5 @@ public class ProductoService implements IProductoService{
         return prodRepo.findById(id).orElse(null);
     }
 
-    @Override
-    public void editProducto(Producto prod) {
-        this.saveProducto(prod);
-    }
 
 }

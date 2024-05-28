@@ -21,8 +21,9 @@ public class VentaService implements IVentaService{
     }
 
     @Override
-    public void saveVenta(Venta vent) {
-        ventaRepo.save(vent);
+    public Venta saveVenta(Venta vent) {
+
+        return ventaRepo.save(vent);
     }
 
     @Override
@@ -35,9 +36,5 @@ public class VentaService implements IVentaService{
        return ventaRepo.findById(id).orElse(null);
     }
 
-    @Override
-    public void editVenta(Venta vent) {
-        this.saveVenta(vent);
-    }
 
     }

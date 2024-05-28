@@ -1,0 +1,31 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+          issuer-uri: http://localhost:9090/realms/el-aparato
+  application:
+    name: springboot-keycloak
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    password: pass123
+    username: root
+    initialization-mode: always
+    url: jdbc:mysql://localhost:3306/elaparato?serverTimezone=UTC
+jwt:
+  auth:
+    converter:
+      principal-attribute: preferred_username
+      resource-id: api-aparato-client
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+server:
+  servlet:
+    context-path: /api

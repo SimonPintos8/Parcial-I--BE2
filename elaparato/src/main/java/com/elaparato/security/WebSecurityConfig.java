@@ -32,6 +32,8 @@ public class WebSecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/ventas/create", "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
                 .requestMatchers(HttpMethod.PUT, "/ventas/edit", "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
                 .requestMatchers(HttpMethod.DELETE, "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
+                .requestMatchers(HttpMethod.GET, "/users/all").hasAnyRole(ADMIN)
+                .requestMatchers(HttpMethod.GET, "/users/username/**").hasAnyRole(ADMIN)
                 .anyRequest().authenticated();
         http.oauth2ResourceServer()
                 .jwt()
