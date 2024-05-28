@@ -29,3 +29,10 @@ logging:
 server:
   servlet:
     context-path: /api
+
+dh:
+  keycloak:
+    serverUrl: http://localhost:9090
+    realm: el-aparato
+    clientId: api-internal-users-client
+    clientSecret: 55hsPGIklyPmqv5olyraSsxCGA1aKwA8

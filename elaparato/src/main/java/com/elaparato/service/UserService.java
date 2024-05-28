@@ -1,7 +1,8 @@
-package com.example.keycloakadmin.service;
+package com.elaparato.service;
 
-import com.example.keycloakadmin.model.User;
-import com.example.keycloakadmin.repository.IUserRepository;
+
+import com.elaparato.model.User;
+import com.elaparato.repository.IUserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,8 +1,9 @@
-package com.example.keycloakadmin.controller;
+package com.elaparato.controller;
 
 
-import com.example.keycloakadmin.model.User;
-import com.example.keycloakadmin.service.UserService;
+
+import com.elaparato.model.User;
+import com.elaparato.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

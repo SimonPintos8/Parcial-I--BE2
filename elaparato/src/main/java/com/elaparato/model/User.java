@@ -1,4 +1,4 @@
-package com.example.keycloakadmin.model;
+package com.elaparato.model;
 
 import lombok.*;
 

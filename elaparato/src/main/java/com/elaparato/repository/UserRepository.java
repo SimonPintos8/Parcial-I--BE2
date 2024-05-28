@@ -1,6 +1,7 @@
-package com.example.keycloakadmin.repository;
+package com.elaparato.repository;
 
-import com.example.keycloakadmin.model.User;
+
+import com.elaparato.model.User;
 import lombok.RequiredArgsConstructor;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.representations.idm.UserRepresentation;
