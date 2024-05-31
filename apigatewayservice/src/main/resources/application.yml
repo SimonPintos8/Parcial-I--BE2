@@ -6,7 +6,7 @@ spring:
             default-filters:
             - TokenRelay
             routes:
-            -   id: hello-service
+            -   id: elaparato-service
                 predicates:
                 - Path=/**
                 uri: http://localhost:8080
@@ -19,7 +19,7 @@ spring:
                 registration:
                     keycloak-test:
                         authorization-grant-type: authorization_code
-                        client-id: api-aparato-client
+                        client-id: api-gateway-client
                         client-secret: TJK6LRMNKvVd9dhAZety7ThhW7zARm20
 #                        El client secret no se expone, pero como no es un proyecto importante/público, así lo dejé
                         redirect-uri: http://localhost:9091/login/oauth2/code/keycloak

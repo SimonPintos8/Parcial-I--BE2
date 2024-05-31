@@ -1,0 +1,4 @@
+Para los usuarios:
+-administrador1 está asignado el rol app-administrador
+-repositor1 está asignado el rol app-repositor
+-vendedor1 está asignado el rol app-vendedor
